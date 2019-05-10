@@ -1,0 +1,25 @@
+<div class="col-md-8" class="jumbotron">
+  <br>
+  <h4 style="text-align:center;" >Welcome to GameCity! Your Card Balance Amount is Rs 600</h4>
+  <div class="table-responsive table-container" >
+    <table class="table"  style="background-color: goldenrod">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Game Name</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let gam of games">
+          <td class="hidden">{{gam.id}}</td>
+          <td >{{gam.game_name}}</td>
+          <td>{{gam.game_price | currency: 'Rs '}}</td>
+          <td>
+            <button (click)="playNow(gam)" class="btn btn-link" >PlayNow</button>
+          </td>
+        </tr>
+      </tbody>
+      </table>
+</div>
+</div>
